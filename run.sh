@@ -1,0 +1,1 @@
+python -m streamlit run frontend/app.py --theme.base="light" --server.port 8000 --server.address 0.0.0.0
