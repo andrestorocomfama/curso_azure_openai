@@ -139,7 +139,7 @@ with col2:
 
     # Mostrar mensajes anteriores en el chat
     for message in st.session_state.messages:
-        avatar_image = Image.open('frontend/styles/euler.png') if message["role"] == "assistant" else Image.open('frontend/styles/USER.png')
+        avatar_image = Image.open('frontend/styles/euler.png') if message["role"] == "assistant" else Image.open('frontend/styles/user.png')
         with st.chat_message(message["role"], avatar=avatar_image):
             st.markdown(message["content"])
 
@@ -153,7 +153,7 @@ if prompt := st.chat_input("Escribe aquí tu pregunta"):
 
         # Agregar el mensaje del usuario al historial de mensajes
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user", avatar=Image.open('frontend/styles/USER.png')):
+        with st.chat_message("user", avatar=Image.open('frontend/styles/user.png')):
             st.markdown(prompt)
 
         # Actualizar tiempo de última interacción
