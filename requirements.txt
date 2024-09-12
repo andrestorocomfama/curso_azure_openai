@@ -200,7 +200,6 @@ python-magic==0.4.27
 python-multipart==0.0.9
 pytz==2023.4
 pytz-deprecation-shim==0.1.0.post0
-pywin32-ctypes==0.2.2
 PyYAML==6.0.1
 pyzmq==25.1.2
 ragas @ git+https://github.com/explodinggradients/ragas.git@e18b927750705a05e7fed7647becc0cadb9aa1bb
