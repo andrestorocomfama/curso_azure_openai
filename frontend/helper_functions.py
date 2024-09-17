@@ -1,6 +1,7 @@
 import os
 import datetime
 
+from datetime import timedelta
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 
@@ -20,7 +21,7 @@ model_emb = os.environ['AZURE_OPENAI_EMBEDDING_MODEL_NAME']
 
 def obtener_saludo():
     # Determina el saludo apropiado según la hora del día
-    hora_actual = datetime.datetime.now().hour
+    hora_actual = datetime.datetime.now().hour - timedelta(hours=5)
     if 6 <= hora_actual < 12:
         return "¡Buenos días!"
     elif 12 <= hora_actual < 18:
